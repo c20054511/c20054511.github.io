@@ -4,7 +4,7 @@
 
 <head>
     
-    <title>老板大气！ - Dove</title>
+    <title>UE5中启用Lumen全局光照的方法 - Dove</title>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -15,25 +15,33 @@
     <meta name="baidu-site-verification" content="baidu_verify_code-MltFqyW2wo.html" />
 
     <link rel="shortcut icon" href="/images/touxiang.jpg" type="image/jpg" />
-    <meta name="description" content="前言 打赏记得留下备注和留言哦~ 微信 支付宝 赞助列表   备注 金额 留言    暂无 暂无 暂无">
-<meta property="og:type" content="website">
-<meta property="og:title" content="老板大气！">
-<meta property="og:url" content="http://c20054511.github.io/reward.html">
+    <meta name="description" content="UE5中启用Lumen全局光照的方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UE5中启用Lumen全局光照的方法">
+<meta property="og:url" content="http://c20054511.github.io/2022/03/25/UE5%E4%B8%AD%E5%90%AF%E7%94%A8Lumen%E5%85%A8%E5%B1%80%E5%85%89%E7%85%A7%E7%9A%84%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="Dove">
-<meta property="og:description" content="前言 打赏记得留下备注和留言哦~ 微信 支付宝 赞助列表   备注 金额 留言    暂无 暂无 暂无">
+<meta property="og:description" content="UE5中启用Lumen全局光照的方法">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s2.loli.net/2022/01/16/gni625B3QWbpsOC.jpg">
-<meta property="og:image" content="https://s4.ax1x.com/2022/01/30/H9RnG4.jpg">
-<meta property="article:published_time" content="2022-01-30T04:05:26.337Z">
-<meta property="article:modified_time" content="2022-01-30T04:05:26.337Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/131c662be4884370b56adb1636081016.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAR3JlZW5idWxl,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/e286f90767424f67b5ae7196dd3b2c6b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAR3JlZW5idWxl,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/ea61f53735294adf848a34f296b57afb.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAR3JlZW5idWxl,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/38225abad4194d0c8d8dc5923180e6b1.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2b471b9803b442dfbd1fe17d2c8c73d2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAR3JlZW5idWxl,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/38feb646914e47bb968236669dc4a3c7.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAR3JlZW5idWxl,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/7f1f589db2474fd0b8931716b24c31c5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAR3JlZW5idWxl,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/6fe87181ab2142e495b3c78f806fbb3d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAR3JlZW5idWxl,size_12,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/c04791a35d0640d69cb72bbe6b6f87c3.png">
+<meta property="article:published_time" content="2022-03-25T07:31:37.556Z">
+<meta property="article:modified_time" content="2022-03-25T07:41:11.268Z">
 <meta property="article:author" content="Dove">
+<meta property="article:tag" content="虚幻引擎">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s2.loli.net/2022/01/16/gni625B3QWbpsOC.jpg">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/131c662be4884370b56adb1636081016.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAR3JlZW5idWxl,size_20,color_FFFFFF,t_70,g_se,x_16">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1648194132540">
+    <link rel="stylesheet" href="/css/style.css?v=1648194132545">
      
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1648194132540">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1648194132545">
     
 <meta name="generator" content="Hexo 6.0.0"></head>
 
@@ -86,7 +94,7 @@
             </div>
         </a>
         
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple true" href="/reward.html" title="支持鸽子">
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/reward.html" title="支持鸽子">
             <i class="mdui-list-item-icon nexmoefont icon-coffee"></i>
             <div class="mdui-list-item-content">
                 支持鸽子
@@ -197,37 +205,45 @@
 
   <article>
       
-          <div class="nexmoe-post-cover" style="padding-bottom: 66.66666666666666%;"> 
-              <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="老板大气！" class="lazyload">
-              <h1>老板大气！</h1>
+          <div class="nexmoe-post-cover" style="padding-bottom: NaN%;"> 
+              <img data-src="https://s1.ax1x.com/2022/03/25/qtaqHJ.jpg" data-sizes="auto" alt="UE5中启用Lumen全局光照的方法" class="lazyload">
+              <h1>UE5中启用Lumen全局光照的方法</h1>
           </div>
       
       
       <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2022年01月30日</a>
-    <a><i class="nexmoefont icon-areachart"></i>35 字</a>
+    <a><i class="nexmoefont icon-calendar-fill"></i>2022年03月25日</a>
+    <a><i class="nexmoefont icon-areachart"></i>465 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
 </div>
 
       
 
-      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p> 打赏记得留下备注和留言哦~</p>
-<h2 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://s2.loli.net/2022/01/16/gni625B3QWbpsOC.jpg" alt="微信" class="lazyload"></p>
-<h2 id="支付宝"><a href="#支付宝" class="headerlink" title="支付宝"></a>支付宝</h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://s4.ax1x.com/2022/01/30/H9RnG4.jpg" alt="支付宝" class="lazyload"></p>
-<h2 id="赞助列表"><a href="#赞助列表" class="headerlink" title="赞助列表"></a>赞助列表</h2><table>
-<thead>
-<tr>
-<th align="left">备注</th>
-<th align="center">金额</th>
-<th align="right">留言</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">暂无</td>
-<td align="center">暂无</td>
-<td align="right">暂无</td>
-</tr>
-</tbody></table>
+      <p>UE5中启用Lumen全局光照的方法</p>
+<span id="more"></span>
+<h2 id="项目设置"><a href="#项目设置" class="headerlink" title="项目设置"></a>项目设置</h2><ul>
+<li><p>打开项目设置 - 渲染 - 把动态全局光照方法和反射方法都设置为Lumen（见图一）<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://img-blog.csdnimg.cn/131c662be4884370b56adb1636081016.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAR3JlZW5idWxl,size_20,color_FFFFFF,t_70,g_se,x_16" alt="图一" class="lazyload"></p>
+</li>
+<li><p>调整软件光线追踪模式 - 细节追踪/全局追踪（见图二）<br>细节追踪：可以追踪每个网格体的距离场，进行更高品质的渲染，需要更多的性能（适用于小场景）<br>全局追踪：快速追踪全局的距离场，品质没有细节追踪高，节省性能（适用于大场景）<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://img-blog.csdnimg.cn/e286f90767424f67b5ae7196dd3b2c6b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAR3JlZW5idWxl,size_20,color_FFFFFF,t_70,g_se,x_16" alt="图二" class="lazyload"></p>
+</li>
+<li><p>开启硬件追踪的方法（见图三）<br>点击“支持硬件光线追踪” - 在开启使用硬件光线追踪（硬件追踪可以追踪的几何体更多，性能开销最大）<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://img-blog.csdnimg.cn/ea61f53735294adf848a34f296b57afb.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAR3JlZW5idWxl,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="图三" class="lazyload"></p>
+</li>
+<li><p>阴影（见图四）<br>阴影贴图：效果低于虚拟阴影贴图，阴影效果有狗牙感<br>虚拟阴影贴图：阴影效果更精细，提升阴影分辨率，性能开销增加（建议开启）<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://img-blog.csdnimg.cn/38225abad4194d0c8d8dc5923180e6b1.png" alt="图四" class="lazyload"></p>
+</li>
+<li><p>开启网格体距离场（见图五）<br>启用Lumen全局光照需要开启（一般启用Lumen后系统会自动开启，如果没自动开启需要手动开启）<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://img-blog.csdnimg.cn/2b471b9803b442dfbd1fe17d2c8c73d2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAR3JlZW5idWxl,size_20,color_FFFFFF,t_70,g_se,x_16" alt="图五" class="lazyload"></p>
+</li>
+<li><p>虚拟纹理（见图六）<br>官方不要求必须启动，但推荐启动（会重新编译着色器，如果场景非常大，会耗费较长时间）<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://img-blog.csdnimg.cn/38feb646914e47bb968236669dc4a3c7.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAR3JlZW5idWxl,size_20,color_FFFFFF,t_70,g_se,x_16" alt="图六" class="lazyload"></p>
+</li>
+<li><p>RHI - DX12（见图七）<br>项目设置 - Windows - 默认RHI - DX12（选择DX12能发挥出最好的效果）<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://img-blog.csdnimg.cn/7f1f589db2474fd0b8931716b24c31c5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAR3JlZW5idWxl,size_20,color_FFFFFF,t_70,g_se,x_16" alt="图七" class="lazyload"></p>
+<h2 id="场景设置"><a href="#场景设置" class="headerlink" title="场景设置"></a>场景设置</h2></li>
+<li><p>后期处理体积（见图八）<br>在后期处理体积中开启全局光照和反射为Lumen<br>“最终采集质量”和“阴影质量”越高，噪点越少，性能开销越大<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://img-blog.csdnimg.cn/6fe87181ab2142e495b3c78f806fbb3d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAR3JlZW5idWxl,size_12,color_FFFFFF,t_70,g_se,x_16" alt="图八" class="lazyload"></p>
+<h2 id="附加"><a href="#附加" class="headerlink" title="附加"></a>附加</h2></li>
+<li><p>无限范围（见图九）<br>如果项目场景过大，可以在后期处理体积中开启无限范围<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://img-blog.csdnimg.cn/c04791a35d0640d69cb72bbe6b6f87c3.png" alt="图九" class="lazyload"></p>
+</li>
+</ul>
+<blockquote>
+<p>发文时间：2022年3月25日<br>UE5版本：UE5 Preview2</p>
+</blockquote>
 
   </article>
 
@@ -235,7 +251,7 @@
       
     <div class="nexmoe-post-copyright">
         <strong>本文作者：</strong>Dove<br>
-        <strong>本文链接：</strong><a href="http://c20054511.github.io/reward.html" title="http:&#x2F;&#x2F;c20054511.github.io&#x2F;reward.html" target="_blank" rel="noopener">http:&#x2F;&#x2F;c20054511.github.io&#x2F;reward.html</a><br>
+        <strong>本文链接：</strong><a href="http://c20054511.github.io/2022/03/25/UE5%E4%B8%AD%E5%90%AF%E7%94%A8Lumen%E5%85%A8%E5%B1%80%E5%85%89%E7%85%A7%E7%9A%84%E6%96%B9%E6%B3%95/" title="http:&#x2F;&#x2F;c20054511.github.io&#x2F;2022&#x2F;03&#x2F;25&#x2F;UE5%E4%B8%AD%E5%90%AF%E7%94%A8Lumen%E5%85%A8%E5%B1%80%E5%85%89%E7%85%A7%E7%9A%84%E6%96%B9%E6%B3%95&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;c20054511.github.io&#x2F;2022&#x2F;03&#x2F;25&#x2F;UE5%E4%B8%AD%E5%90%AF%E7%94%A8Lumen%E5%85%A8%E5%B1%80%E5%85%89%E7%85%A7%E7%9A%84%E6%96%B9%E6%B3%95&#x2F;</a><br>
         
             <strong>版权声明：</strong>商业转载请联系作者获得授权，非商业转载请注明出处。
         
@@ -246,9 +262,28 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow">
     
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E8%99%9A%E5%B9%BB%E5%BC%95%E6%93%8E/">虚幻引擎</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E8%99%9A%E5%B9%BB%E5%BC%95%E6%93%8E/" rel="tag">虚幻引擎</a>
     
 </div>
 
+  
+      <div class="nexmoe-post-footer">
+          <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src='https://cdn.jsdelivr.net/npm/valine'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: 'JfgxJvhkuwupUqOhLefrUyWq-gzGzoHsz',
+        appKey: '1QqslveY0dCAokimBfN8F6vw'
+    })
+</script>
+</section>
+      </div>
   
 </div>
             <div class="nexmoe-post-right">
@@ -282,7 +317,7 @@
 
  
 
-<script async src="/js/app.js?v=1648194132541"></script>
+<script async src="/js/app.js?v=1648194132546"></script>
 
 
 
